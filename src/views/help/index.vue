@@ -1,6 +1,9 @@
 <template>
   <div class="war">
-    <div class="banner"></div>开篇
+    <div class="banner">
+      芯象软件全面升级
+      <br />高级版、旗舰版 享受更多功能
+    </div>开篇
     <br />2020-11-13 10:57:14
     <br />开篇：芯象导播介绍
     <br />芯象导播用途
@@ -18,9 +21,16 @@
 <style lang="scss" scoped>
 .war {
   .banner {
-    background: #f5f6f7;
-    height: 400px;
     width: 100%;
+    height: 400px;
+    background: linear-gradient(6deg, #fff, #e5faee);
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    color: #2f332f;
+    line-height: 56px;
+    padding-top: 65px;
   }
   font-size: 15px;
   line-height: 30px;
