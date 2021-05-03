@@ -4,27 +4,22 @@
       <div class="con-l">logo</div>
       <div class="con-r">
         <el-menu
-          :default-active="activeIndex"
+          :default-active="$route.path"
           class="el-menu-demo"
           mode="horizontal"
           @select="handleSelect"
           active-text-color="#2dac37"
+          router
         >
-          <el-menu-item index="1">首页</el-menu-item>
-          <el-menu-item index="2">版本介绍</el-menu-item>
+          <el-menu-item index="/">首页</el-menu-item>
           <el-submenu index="3" class="submenu">
             <template slot="title">产品中心</template>
             <el-menu-item index="3-1">选项1</el-menu-item>
             <el-menu-item index="3-2">选项2</el-menu-item>
           </el-submenu>
-          <el-submenu index="4-4">
-            <template slot="title">easymedia硬件</template>
-            <el-menu-item index="4-1">选项1</el-menu-item>
-            <el-menu-item index="4-2">选项2</el-menu-item>
-            <el-menu-item index="4-3">选项3</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="5">帮助中心</el-menu-item>
-          <el-menu-item index="6">关于我们</el-menu-item>
+          <el-menu-item index="/laboratory">实验室中心</el-menu-item>
+          <el-menu-item index="/help">帮助中心</el-menu-item>
+          <el-menu-item index="/aboutme">关于我们</el-menu-item>
         </el-menu>
       </div>
     </div>
@@ -42,6 +37,7 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath)
+      console.log('router', this.$route)
     },
   },
 }

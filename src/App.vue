@@ -2,14 +2,17 @@
   <div id="app">
     <NavList />
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import NavList from './views/nav.vue'
+import Footer from './components/footer'
 export default {
   components: {
     NavList,
+    Footer,
   },
   data() {
     return {}
